@@ -1,0 +1,29 @@
+{
+  "id": 7408690,
+  "name": "Permanent",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "githakka/claw",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "refs/heads/production",
+        "refs/heads/development"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "creation"
+    }
+  ],
+  "bypass_actors": []
+}

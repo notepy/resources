@@ -1,0 +1,35 @@
+{
+  "id": 7408734,
+  "name": "Naming",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "githakka/claw",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [
+        "refs/heads/feature/*",
+        "refs/heads/fix/*",
+        "refs/heads/chore/*",
+        "refs/heads/ci/*",
+        "refs/heads/docs/*"
+      ],
+      "include": []
+    }
+  },
+  "rules": [
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "creation"
+    }
+  ],
+  "bypass_actors": [
+    {
+      "actor_id": 29110,
+      "actor_type": "Integration",
+      "bypass_mode": "always"
+    }
+  ]
+}
